@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Check out the code from the repository
       - name: Check out code
         uses: actions/checkout@v2
 
@@ -27,11 +26,9 @@ jobs:
       - name: Verify installed packages
         run: pip list
 
-      - name: Set environment variable
+      - name: Run Pytest with HTML Report
         env:
           RUTA: ${{ secrets.RUTA }}
-
-      - name: Run Pytest with HTML Report
         run: |
           pytest --maxfail=1 --disable-warnings -q --html=report.html --self-contained-html
 
