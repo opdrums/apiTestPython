@@ -1,0 +1,17 @@
+[
+  {
+    "title": "un usuario nuevo",
+    "body": "algo",
+    "userId": 1
+  },
+  {
+    "title": "otro usuario",
+    "body": "algo diferente",
+    "userId": 2
+  },
+  {
+    "title": "nuevo usuario 3",
+    "body": "más datos",
+    "userId": 3
+  }
+]
