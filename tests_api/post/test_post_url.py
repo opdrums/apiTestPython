@@ -12,7 +12,7 @@ def get_base_url():
     return base_url
 
 def json_data():
-    file_path = os.path.join(os.getenv("ruta", "."), "create_user.json")
+    file_path = os.path.join(os.getenv("RUTA", "."), "create_user.json")
     if not os.path.exists(file_path):
         pytest.fail(f"El archivo {file_path} no existe en el directorio actual.")
 
