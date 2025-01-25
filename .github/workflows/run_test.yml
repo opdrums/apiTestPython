@@ -24,7 +24,7 @@ jobs:
           python -m pip install --upgrade pip
 
       - name: Set environment variable
-        run: echo "MY_ENV_VAR=${{ secrets.ruta}}"
+        run: echo "MY_ENV_VAR=${{ secrets.RUTA}}"
 
       - name: Run Pytest with HTML Report
         run: |
