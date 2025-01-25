@@ -26,19 +26,14 @@ jobs:
       - name: Verify installed packages
         run: pip list
 
-      - name: Set environment variable
-        env:
-          RUTA: ${{ github.workspace }}/json
-
       - name: Run Pytest with HTML Report
         env:
           RUTA: ${{ github.workspace }}/json
         run: |
           pytest --maxfail=1 --disable-warnings -q --html=report.html --self-contained-html
 
+      - name: Upload HTML Report as artifact
         uses: actions/upload-artifact@v4
         with:
           name: pytest-report
           path: report.html
-
-
