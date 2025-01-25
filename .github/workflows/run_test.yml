@@ -28,7 +28,8 @@ jobs:
         run: pip list
 
       - name: Set environment variable
-        run: echo "RUTA=${{ secrets.RUTA }}" >> $GITHUB_ENV
+        env:
+          RUTA: ${{ secrets.RUTA }}
 
       - name: Run Pytest with HTML Report
         run: |
